@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class TableModel {
-    private String schemaname;
-    private String tablename;
+    private String fieldname;
+    private Object value;
+    private String dataType;
 }

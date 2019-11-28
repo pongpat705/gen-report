@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -27,11 +28,22 @@ public class RowMapperImpl<T> implements RowMapper<T> {
     public T mapRow(ResultSet resultSet, int i) throws SQLException {
         T result = null;
         try {
+            ResultSetMetaData md = resultSet.getMetaData();
+            int columnCount = md.getColumnCount();
+            for (int j = 0; j < columnCount; j++) {
+                String columnType = md.getColumnTypeName(j);
+                log.info("columnType {} ", columnType);
+                String columnName = md.getColumnName(j);
+                log.info("columnName {} ", columnName);
+                result.getClass().getf
+            }
             result = this.getInstance();
             log.info("mapper for {}", result.getClass().getName());
             Field[] fields = result.getClass().getDeclaredFields();
             log.info("fields size {}", fields.length);
-            for (Field f : fields) {
+            for (int j = 0; j < fields.length; j++){
+                Field f = fields[j];
+
                 f.setAccessible(true);
                 log.info("field name {} type {}", f.getName(), f.getType().getName());
                 Object xValue = null;

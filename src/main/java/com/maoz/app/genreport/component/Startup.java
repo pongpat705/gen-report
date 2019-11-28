@@ -12,12 +12,11 @@ public class Startup {
 
     private BaseDao baseDao;
 
-    public Startup(BaseDao baseDao) {
-        this.baseDao = baseDao;
-    }
-
     @PostConstruct
     public void afterInit(){
+        this.baseDao = new BaseDao();
         List<TableModel> tableNames = this.baseDao.findAllTableNames();
     }
+
+
 }
