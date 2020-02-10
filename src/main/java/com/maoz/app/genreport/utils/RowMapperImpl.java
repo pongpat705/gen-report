@@ -25,17 +25,17 @@ public class RowMapperImpl<T> implements RowMapper<T> {
 
 
     @Override
-    public T mapRow(ResultSet resultSet, int i) throws SQLException {
+    public T mapRow(ResultSet resultSet, int i) {
         T result = null;
         try {
             ResultSetMetaData md = resultSet.getMetaData();
             int columnCount = md.getColumnCount();
-            for (int j = 0; j < columnCount; j++) {
+            log.info("column count {}", columnCount);
+            for (int j = 1; j < columnCount; j++) {
                 String columnType = md.getColumnTypeName(j);
                 log.info("columnType {} ", columnType);
                 String columnName = md.getColumnName(j);
                 log.info("columnName {} ", columnName);
-                result.getClass().getf
             }
             result = this.getInstance();
             log.info("mapper for {}", result.getClass().getName());
