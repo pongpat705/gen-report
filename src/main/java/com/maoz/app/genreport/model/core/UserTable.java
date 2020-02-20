@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class UserTable {
     private String tableName;
-    private String tableSpaceName;
+    private String tablespaceName;
 }

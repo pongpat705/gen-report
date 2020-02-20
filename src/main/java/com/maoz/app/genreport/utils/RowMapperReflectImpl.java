@@ -1,5 +1,6 @@
 package com.maoz.app.genreport.utils;
 
+import com.google.common.base.CaseFormat;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.RowMapper;
@@ -47,18 +48,20 @@ public class RowMapperReflectImpl<T> implements RowMapper<T> {
                 f.setAccessible(true);
                 log.info("field name {} type {}", f.getName(), f.getType().getName());
                 Object xValue = null;
+                String k = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, f.getName());
+                log.info("key : {}", k);
                 if(f.getType() == Long.class){
-                    xValue = resultSet.getLong(f.getName());
+                    xValue = resultSet.getLong(k);
                 } else if(f.getType() == String.class){
-                    xValue = resultSet.getString(f.getName());
+                    xValue = resultSet.getString(k);
                 } else if(f.getType() == Integer.class){
-                    xValue = resultSet.getInt(f.getName());
+                    xValue = resultSet.getInt(k);
                 } else if(f.getType() == BigDecimal.class){
-                    xValue = resultSet.getBigDecimal(f.getName());
+                    xValue = resultSet.getBigDecimal(k);
                 } else if(f.getType() == Double.class){
-                    xValue = resultSet.getDouble(f.getName());
+                    xValue = resultSet.getDouble(k);
                 } else if(f.getType() == Date.class){
-                    java.sql.Date xDate = resultSet.getDate(f.getName());
+                    java.sql.Date xDate = resultSet.getDate(k);
                     xValue = new Date(xDate.getTime());
                 }
                 f.set(result, xValue);
