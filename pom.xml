@@ -49,11 +49,11 @@
             <artifactId>guava</artifactId>
             <version>14.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.mapstruct</groupId>-->
-<!--            <artifactId>mapstruct</artifactId>-->
-<!--            <version>${org.mapstruct.version}</version>-->
-<!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.mapstruct</groupId>-->
+    <!--            <artifactId>mapstruct</artifactId>-->
+    <!--            <version>${org.mapstruct.version}</version>-->
+    <!--        </dependency>-->
 
         <!--        <dependency>-->
 <!--            <groupId>org.postgresql</groupId>-->

@@ -7,4 +7,5 @@ public class Report {
     private Long reportId;
     private String reportName;
     private String reportQuery;
+    private String reportType;
 }

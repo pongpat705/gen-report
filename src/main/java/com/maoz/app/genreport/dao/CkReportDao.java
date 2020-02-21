@@ -23,7 +23,7 @@ public class CkReportDao {
     public List<Report> findAllReport(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append("select REPORT_ID, REPORT_NAME, REPORT_QUERY ");
+        sb.append("select REPORT_ID, REPORT_NAME, REPORT_QUERY, REPORT_TYPE ");
         sb.append("from CK_REPORT ");
 
         log.info("sql for findAllReport : {}", sb.toString());

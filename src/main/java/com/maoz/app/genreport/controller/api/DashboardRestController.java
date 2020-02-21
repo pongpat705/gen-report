@@ -6,6 +6,7 @@ import com.maoz.app.genreport.model.core.entity.Report;
 import com.maoz.app.genreport.model.core.model.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,7 @@ public class DashboardRestController {
         this.ckReportDao = ckReportDao;
     }
 
+    @CrossOrigin("*")
     @GetMapping("/report-list")
     public ApiResponse<List<Report>> getReportList(){
 
