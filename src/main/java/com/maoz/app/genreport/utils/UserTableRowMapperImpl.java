@@ -1,7 +1,7 @@
 package com.maoz.app.genreport.utils;
 
 
-import com.maoz.app.genreport.model.core.UserTable;
+import com.maoz.app.genreport.model.core.entity.UserTable;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;

@@ -1,7 +1,7 @@
 package com.maoz.app.genreport.controller;
 
 import com.maoz.app.genreport.dao.UserTableDao;
-import com.maoz.app.genreport.model.core.UserTable;
+import com.maoz.app.genreport.model.core.entity.UserTable;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;

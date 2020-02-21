@@ -14,13 +14,13 @@ import java.util.Date;
 
 @Slf4j
 @NoArgsConstructor
-public class RowMapperReflectImpl<T> implements RowMapper<T> {
+public class SnakeCaseRowMapperReflectImpl<T> implements RowMapper<T> {
     private Class<T> clazzOfT;
     public T getInstance() throws Exception {
         return clazzOfT.getDeclaredConstructor().newInstance();
     }
 
-    public RowMapperReflectImpl(Class<T> clazzOfT) {
+    public SnakeCaseRowMapperReflectImpl(Class<T> clazzOfT) {
         this.clazzOfT = clazzOfT;
     }
 

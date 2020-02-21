@@ -1,8 +1,8 @@
 package com.maoz.app.genreport.dao;
 
 import com.maoz.app.genreport.aop.LogExecutionTime;
-import com.maoz.app.genreport.model.core.UserTable;
-import com.maoz.app.genreport.utils.RowMapperReflectImpl;
+import com.maoz.app.genreport.model.core.entity.UserTable;
+import com.maoz.app.genreport.utils.SnakeCaseRowMapperReflectImpl;
 import com.maoz.app.genreport.utils.UserTableRowMapperImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;
@@ -33,7 +33,7 @@ public class UserTableDao {
 
         log.info("sql for findAllTableNames : {}", sb.toString());
         log.info(jdbcTemplate.toString());
-        List<UserTable> tableNames = jdbcTemplate.query(sb.toString(), new RowMapperReflectImpl<>(UserTable.class));
+        List<UserTable> tableNames = jdbcTemplate.query(sb.toString(), new SnakeCaseRowMapperReflectImpl<>(UserTable.class));
         log.info("data {}", tableNames.toString());
 
         return  tableNames;
