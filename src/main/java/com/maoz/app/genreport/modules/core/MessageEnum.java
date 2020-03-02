@@ -4,7 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum MessageEnum {
-    OK("OK", "00")
+    OK("OK", "00"),
+    NOTFOUND("NOT_FOUND", "01"),
+    BAD("BAD", "01")
     ;
 
     private String message;
