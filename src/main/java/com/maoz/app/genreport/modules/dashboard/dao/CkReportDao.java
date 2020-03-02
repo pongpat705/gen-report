@@ -1,6 +1,6 @@
-package com.maoz.app.genreport.dao;
+package com.maoz.app.genreport.modules.dashboard.dao;
 
-import com.maoz.app.genreport.model.core.entity.Report;
+import com.maoz.app.genreport.modules.core.entity.Report;
 import com.maoz.app.genreport.utils.SnakeCaseRowMapperReflectImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;

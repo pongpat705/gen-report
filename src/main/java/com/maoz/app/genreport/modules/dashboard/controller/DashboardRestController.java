@@ -1,9 +1,9 @@
-package com.maoz.app.genreport.controller.api;
+package com.maoz.app.genreport.modules.dashboard.controller;
 
-import com.maoz.app.genreport.dao.CkReportDao;
-import com.maoz.app.genreport.model.core.MessageEnum;
-import com.maoz.app.genreport.model.core.entity.Report;
-import com.maoz.app.genreport.model.core.model.ApiResponse;
+import com.maoz.app.genreport.modules.dashboard.dao.CkReportDao;
+import com.maoz.app.genreport.modules.core.MessageEnum;
+import com.maoz.app.genreport.modules.core.entity.Report;
+import com.maoz.app.genreport.modules.core.model.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.CrossOrigin;

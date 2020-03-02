@@ -1,4 +1,4 @@
-package com.maoz.app.genreport.model.core.model;
+package com.maoz.app.genreport.modules.core.model;
 import lombok.Data;
 
 @Data

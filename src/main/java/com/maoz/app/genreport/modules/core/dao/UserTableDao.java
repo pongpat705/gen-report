@@ -1,7 +1,7 @@
-package com.maoz.app.genreport.dao;
+package com.maoz.app.genreport.modules.core.dao;
 
 import com.maoz.app.genreport.aop.LogExecutionTime;
-import com.maoz.app.genreport.model.core.entity.UserTable;
+import com.maoz.app.genreport.modules.core.entity.UserTable;
 import com.maoz.app.genreport.utils.SnakeCaseRowMapperReflectImpl;
 import com.maoz.app.genreport.utils.UserTableRowMapperImpl;
 import lombok.extern.slf4j.Slf4j;
