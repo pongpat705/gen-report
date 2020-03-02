@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class TimeSpendPointcut {
 
-    @Pointcut("within(com.maoz.app.genreport.dao.*)")
+    @Pointcut("within(com.maoz.app.genreport.modules.dashboard.dao*)")
     public void process(){ }
     @Around("process()")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
